@@ -1,0 +1,759 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		162313F46D8D98E62C4A7EFB /* Pods_DabookUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5061E9B0117031B091F697C9 /* Pods_DabookUITests.framework */; };
+		4A4D358422C92DB80082F87A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D358322C92DB80082F87A /* AppDelegate.swift */; };
+		4A4D358622C92DB80082F87A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D358522C92DB80082F87A /* LoginViewController.swift */; };
+		4A4D358922C92DB80082F87A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4D358722C92DB80082F87A /* Main.storyboard */; };
+		4A4D358B22C92DB90082F87A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4D358A22C92DB90082F87A /* Assets.xcassets */; };
+		4A4D358E22C92DB90082F87A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A4D358C22C92DB90082F87A /* LaunchScreen.storyboard */; };
+		4A4D359922C92DB90082F87A /* DabookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D359822C92DB90082F87A /* DabookTests.swift */; };
+		4A4D35A422C92DB90082F87A /* DabookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D35A322C92DB90082F87A /* DabookUITests.swift */; };
+		4AB2C8B022C93ACA0094048E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AB2C8AF22C93ACA0094048E /* MainViewController.swift */; };
+		4ADC56F422C9C13400C8A2A8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADC56F322C9C13400C8A2A8 /* ProfileViewController.swift */; };
+		4ADC56F622C9C16800C8A2A8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADC56F522C9C16800C8A2A8 /* HomeViewController.swift */; };
+		4ADC56FB22C9C6A400C8A2A8 /* ProfileTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ADC56FA22C9C6A400C8A2A8 /* ProfileTVC.swift */; };
+		4AF42F0D22C9CB1E008F606B /* FriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF42F0C22C9CB1E008F606B /* FriendViewController.swift */; };
+		7636675E89A526EEB2EF9BDC /* Pods_Dabook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31C8F7BD31709D992BEC39A5 /* Pods_Dabook.framework */; };
+		D61980D95A8C80808A5228E0 /* Pods_DabookTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9F65CFC55E2B9560D83821 /* Pods_DabookTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4A4D359522C92DB90082F87A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A4D357822C92DB80082F87A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A4D357F22C92DB80082F87A;
+			remoteInfo = Dabook;
+		};
+		4A4D35A022C92DB90082F87A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4A4D357822C92DB80082F87A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4A4D357F22C92DB80082F87A;
+			remoteInfo = Dabook;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B7F30544DA7F7EBFED7BDEF /* Pods-DabookTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabookTests.debug.xcconfig"; path = "Target Support Files/Pods-DabookTests/Pods-DabookTests.debug.xcconfig"; sourceTree = "<group>"; };
+		31C8F7BD31709D992BEC39A5 /* Pods_Dabook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dabook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3AFBB46B816BD94C764255BE /* Pods-DabookTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabookTests.release.xcconfig"; path = "Target Support Files/Pods-DabookTests/Pods-DabookTests.release.xcconfig"; sourceTree = "<group>"; };
+		49C00F67D5CB2A7D60F2AB60 /* Pods-DabookUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabookUITests.release.xcconfig"; path = "Target Support Files/Pods-DabookUITests/Pods-DabookUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4A4D358022C92DB80082F87A /* Dabook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dabook.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A4D358322C92DB80082F87A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4A4D358522C92DB80082F87A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		4A4D358822C92DB80082F87A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4A4D358A22C92DB90082F87A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4A4D358D22C92DB90082F87A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4A4D358F22C92DB90082F87A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A4D359422C92DB90082F87A /* DabookTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DabookTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A4D359822C92DB90082F87A /* DabookTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DabookTests.swift; sourceTree = "<group>"; };
+		4A4D359A22C92DB90082F87A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A4D359F22C92DB90082F87A /* DabookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DabookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A4D35A322C92DB90082F87A /* DabookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DabookUITests.swift; sourceTree = "<group>"; };
+		4A4D35A522C92DB90082F87A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4AB2C8AF22C93ACA0094048E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4ADC56F322C9C13400C8A2A8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		4ADC56F522C9C16800C8A2A8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4ADC56FA22C9C6A400C8A2A8 /* ProfileTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTVC.swift; sourceTree = "<group>"; };
+		4AF42F0C22C9CB1E008F606B /* FriendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewController.swift; sourceTree = "<group>"; };
+		5061E9B0117031B091F697C9 /* Pods_DabookUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DabookUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		938FDA4BC2CFC38BBDC0CDC9 /* Pods-Dabook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dabook.release.xcconfig"; path = "Target Support Files/Pods-Dabook/Pods-Dabook.release.xcconfig"; sourceTree = "<group>"; };
+		B15131077F84DB7B62C6B5A4 /* Pods-Dabook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dabook.debug.xcconfig"; path = "Target Support Files/Pods-Dabook/Pods-Dabook.debug.xcconfig"; sourceTree = "<group>"; };
+		BB9F65CFC55E2B9560D83821 /* Pods_DabookTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DabookTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC2EC099D6D2C01E31EA2DFD /* Pods-DabookUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DabookUITests.debug.xcconfig"; path = "Target Support Files/Pods-DabookUITests/Pods-DabookUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4A4D357D22C92DB80082F87A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7636675E89A526EEB2EF9BDC /* Pods_Dabook.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A4D359122C92DB90082F87A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D61980D95A8C80808A5228E0 /* Pods_DabookTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A4D359C22C92DB90082F87A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				162313F46D8D98E62C4A7EFB /* Pods_DabookUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		40AB392F6C0F97D2FC80B71B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B15131077F84DB7B62C6B5A4 /* Pods-Dabook.debug.xcconfig */,
+				938FDA4BC2CFC38BBDC0CDC9 /* Pods-Dabook.release.xcconfig */,
+				0B7F30544DA7F7EBFED7BDEF /* Pods-DabookTests.debug.xcconfig */,
+				3AFBB46B816BD94C764255BE /* Pods-DabookTests.release.xcconfig */,
+				DC2EC099D6D2C01E31EA2DFD /* Pods-DabookUITests.debug.xcconfig */,
+				49C00F67D5CB2A7D60F2AB60 /* Pods-DabookUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4A4D357722C92DB80082F87A = {
+			isa = PBXGroup;
+			children = (
+				4A4D358222C92DB80082F87A /* Dabook */,
+				4A4D359722C92DB90082F87A /* DabookTests */,
+				4A4D35A222C92DB90082F87A /* DabookUITests */,
+				4A4D358122C92DB80082F87A /* Products */,
+				40AB392F6C0F97D2FC80B71B /* Pods */,
+				EF9B77DF63A9A682C0CBEDDF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4A4D358122C92DB80082F87A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D358022C92DB80082F87A /* Dabook.app */,
+				4A4D359422C92DB90082F87A /* DabookTests.xctest */,
+				4A4D359F22C92DB90082F87A /* DabookUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4A4D358222C92DB80082F87A /* Dabook */ = {
+			isa = PBXGroup;
+			children = (
+				4ADC56F722C9C34400C8A2A8 /* TableViewCells */,
+				4AB2C8AC22C93A920094048E /* ViewControllers */,
+				4A4D358322C92DB80082F87A /* AppDelegate.swift */,
+				4A4D358722C92DB80082F87A /* Main.storyboard */,
+				4A4D358A22C92DB90082F87A /* Assets.xcassets */,
+				4A4D358C22C92DB90082F87A /* LaunchScreen.storyboard */,
+				4A4D358F22C92DB90082F87A /* Info.plist */,
+			);
+			path = Dabook;
+			sourceTree = "<group>";
+		};
+		4A4D359722C92DB90082F87A /* DabookTests */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D359822C92DB90082F87A /* DabookTests.swift */,
+				4A4D359A22C92DB90082F87A /* Info.plist */,
+			);
+			path = DabookTests;
+			sourceTree = "<group>";
+		};
+		4A4D35A222C92DB90082F87A /* DabookUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D35A322C92DB90082F87A /* DabookUITests.swift */,
+				4A4D35A522C92DB90082F87A /* Info.plist */,
+			);
+			path = DabookUITests;
+			sourceTree = "<group>";
+		};
+		4AB2C8AC22C93A920094048E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4A4D358522C92DB80082F87A /* LoginViewController.swift */,
+				4AB2C8AF22C93ACA0094048E /* MainViewController.swift */,
+				4ADC56F322C9C13400C8A2A8 /* ProfileViewController.swift */,
+				4ADC56F522C9C16800C8A2A8 /* HomeViewController.swift */,
+				4AF42F0C22C9CB1E008F606B /* FriendViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4ADC56F722C9C34400C8A2A8 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4ADC56FA22C9C6A400C8A2A8 /* ProfileTVC.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		EF9B77DF63A9A682C0CBEDDF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31C8F7BD31709D992BEC39A5 /* Pods_Dabook.framework */,
+				BB9F65CFC55E2B9560D83821 /* Pods_DabookTests.framework */,
+				5061E9B0117031B091F697C9 /* Pods_DabookUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4A4D357F22C92DB80082F87A /* Dabook */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A4D35A822C92DB90082F87A /* Build configuration list for PBXNativeTarget "Dabook" */;
+			buildPhases = (
+				E0492DED33D88B6C8FD2F07F /* [CP] Check Pods Manifest.lock */,
+				4A4D357C22C92DB80082F87A /* Sources */,
+				4A4D357D22C92DB80082F87A /* Frameworks */,
+				4A4D357E22C92DB80082F87A /* Resources */,
+				538CC9AF940A25A73067ACA9 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dabook;
+			productName = Dabook;
+			productReference = 4A4D358022C92DB80082F87A /* Dabook.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4A4D359322C92DB90082F87A /* DabookTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A4D35AB22C92DB90082F87A /* Build configuration list for PBXNativeTarget "DabookTests" */;
+			buildPhases = (
+				364057E2C300694E9E4DA6AD /* [CP] Check Pods Manifest.lock */,
+				4A4D359022C92DB90082F87A /* Sources */,
+				4A4D359122C92DB90082F87A /* Frameworks */,
+				4A4D359222C92DB90082F87A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A4D359622C92DB90082F87A /* PBXTargetDependency */,
+			);
+			name = DabookTests;
+			productName = DabookTests;
+			productReference = 4A4D359422C92DB90082F87A /* DabookTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4A4D359E22C92DB90082F87A /* DabookUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4A4D35AE22C92DB90082F87A /* Build configuration list for PBXNativeTarget "DabookUITests" */;
+			buildPhases = (
+				49881901B0C1E3812A6795B6 /* [CP] Check Pods Manifest.lock */,
+				4A4D359B22C92DB90082F87A /* Sources */,
+				4A4D359C22C92DB90082F87A /* Frameworks */,
+				4A4D359D22C92DB90082F87A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4A4D35A122C92DB90082F87A /* PBXTargetDependency */,
+			);
+			name = DabookUITests;
+			productName = DabookUITests;
+			productReference = 4A4D359F22C92DB90082F87A /* DabookUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4A4D357822C92DB80082F87A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Djaka Pradana";
+				TargetAttributes = {
+					4A4D357F22C92DB80082F87A = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+					4A4D359322C92DB90082F87A = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4A4D357F22C92DB80082F87A;
+					};
+					4A4D359E22C92DB90082F87A = {
+						CreatedOnToolsVersion = 10.2.1;
+						TestTargetID = 4A4D357F22C92DB80082F87A;
+					};
+				};
+			};
+			buildConfigurationList = 4A4D357B22C92DB80082F87A /* Build configuration list for PBXProject "Dabook" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4A4D357722C92DB80082F87A;
+			productRefGroup = 4A4D358122C92DB80082F87A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4A4D357F22C92DB80082F87A /* Dabook */,
+				4A4D359322C92DB90082F87A /* DabookTests */,
+				4A4D359E22C92DB90082F87A /* DabookUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4A4D357E22C92DB80082F87A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A4D358E22C92DB90082F87A /* LaunchScreen.storyboard in Resources */,
+				4A4D358B22C92DB90082F87A /* Assets.xcassets in Resources */,
+				4A4D358922C92DB80082F87A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A4D359222C92DB90082F87A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A4D359D22C92DB90082F87A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		364057E2C300694E9E4DA6AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DabookTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		49881901B0C1E3812A6795B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DabookUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		538CC9AF940A25A73067ACA9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dabook/Pods-Dabook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dabook/Pods-Dabook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dabook/Pods-Dabook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E0492DED33D88B6C8FD2F07F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dabook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4A4D357C22C92DB80082F87A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4ADC56F622C9C16800C8A2A8 /* HomeViewController.swift in Sources */,
+				4AB2C8B022C93ACA0094048E /* MainViewController.swift in Sources */,
+				4A4D358622C92DB80082F87A /* LoginViewController.swift in Sources */,
+				4AF42F0D22C9CB1E008F606B /* FriendViewController.swift in Sources */,
+				4ADC56FB22C9C6A400C8A2A8 /* ProfileTVC.swift in Sources */,
+				4ADC56F422C9C13400C8A2A8 /* ProfileViewController.swift in Sources */,
+				4A4D358422C92DB80082F87A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A4D359022C92DB90082F87A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A4D359922C92DB90082F87A /* DabookTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4A4D359B22C92DB90082F87A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4A4D35A422C92DB90082F87A /* DabookUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4A4D359622C92DB90082F87A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A4D357F22C92DB80082F87A /* Dabook */;
+			targetProxy = 4A4D359522C92DB90082F87A /* PBXContainerItemProxy */;
+		};
+		4A4D35A122C92DB90082F87A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4A4D357F22C92DB80082F87A /* Dabook */;
+			targetProxy = 4A4D35A022C92DB90082F87A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4A4D358722C92DB80082F87A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A4D358822C92DB80082F87A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4A4D358C22C92DB90082F87A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4A4D358D22C92DB90082F87A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4A4D35A622C92DB90082F87A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4A4D35A722C92DB90082F87A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4A4D35A922C92DB90082F87A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B15131077F84DB7B62C6B5A4 /* Pods-Dabook.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Dabook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.djaka.Dabook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4A4D35AA22C92DB90082F87A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 938FDA4BC2CFC38BBDC0CDC9 /* Pods-Dabook.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Dabook/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.djaka.Dabook;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4A4D35AC22C92DB90082F87A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B7F30544DA7F7EBFED7BDEF /* Pods-DabookTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DabookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.djaka.DabookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dabook.app/Dabook";
+			};
+			name = Debug;
+		};
+		4A4D35AD22C92DB90082F87A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AFBB46B816BD94C764255BE /* Pods-DabookTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DabookTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.djaka.DabookTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Dabook.app/Dabook";
+			};
+			name = Release;
+		};
+		4A4D35AF22C92DB90082F87A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC2EC099D6D2C01E31EA2DFD /* Pods-DabookUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DabookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.djaka.DabookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dabook;
+			};
+			name = Debug;
+		};
+		4A4D35B022C92DB90082F87A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49C00F67D5CB2A7D60F2AB60 /* Pods-DabookUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DabookUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = id.djaka.DabookUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Dabook;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4A4D357B22C92DB80082F87A /* Build configuration list for PBXProject "Dabook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A4D35A622C92DB90082F87A /* Debug */,
+				4A4D35A722C92DB90082F87A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A4D35A822C92DB90082F87A /* Build configuration list for PBXNativeTarget "Dabook" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A4D35A922C92DB90082F87A /* Debug */,
+				4A4D35AA22C92DB90082F87A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A4D35AB22C92DB90082F87A /* Build configuration list for PBXNativeTarget "DabookTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A4D35AC22C92DB90082F87A /* Debug */,
+				4A4D35AD22C92DB90082F87A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4A4D35AE22C92DB90082F87A /* Build configuration list for PBXNativeTarget "DabookUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A4D35AF22C92DB90082F87A /* Debug */,
+				4A4D35B022C92DB90082F87A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4A4D357822C92DB80082F87A /* Project object */;
+}
