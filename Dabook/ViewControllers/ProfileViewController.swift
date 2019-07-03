@@ -2,62 +2,97 @@
 //  ProfileViewController.swift
 //  Dabook
 //
-//  Created by Djaka Pradana on 01/07/19.
+//  Created by Djaka Pradana on 02/07/19.
 //  Copyright © 2019 Djaka Pradana. All rights reserved.
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
-class ProfileViewController: UIViewController {
+enum Section: Int{
+    case ProfileCover = 0
+    case AboutInfo = 2
+    case Photos = 1
+    case Friends = 3
+}
+
+class ProfileViewController: UITableViewController {
     
-    let coverImageView: UIImageView = {
-        let view: UIImageView = UIImageView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = UIImage(named: "logo")
-        
-        return view
-    }()
-    
-    let profileImage: UIImageView = {
-        let view: UIImageView = UIImageView()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.image = UIImage(named: "logo")
-        view.layer.cornerRadius = 128
-        
-        return view
-    }()
+    let profileSection: String = "profileHeader"
+    let photoSection: String = "photoSection"
+    var profileModel: ProfileModel? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        addSubview()
+
+        setupTable()
+        getData()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        render()
+    func setupTable() {
+        tableView.register(ProfileCoverTVC.self, forCellReuseIdentifier: profileSection)
+        tableView.register(PhotoTVC.self, forCellReuseIdentifier: photoSection)
+        tableView.rowHeight = UITableView.automaticDimension
+    }
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 4
+    }
+
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+            case Section.ProfileCover.rawValue:
+                return renderProfileHeaderCell()
+            case Section.Photos.rawValue:
+                return renderPhotoCell()
+         default:
+            return UITableViewCell()
+        }
     }
     
-    private func addSubview() {
-        view.addSubview(coverImageView)
-        view.addSubview(profileImage)
+    func getData() {
+        let urlString: String = "\(URLHelper.baseUrl)\(URLHelper.profile)&access_token=\(UserDefaults.standard.string(forKey: "token") ?? "" )"
+        
+        guard let url: URL = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? "") else {
+            print("Invalid URL: \(urlString)")
+            return
+        }
+        
+        Alamofire
+            .request(url, method: .get)
+            .validate()
+            .responseJSON{[weak self](response) in
+                guard response.result.isSuccess else {
+                    print("happen")
+                    return
+                }
+                
+                let json = JSON(response.result.value as Any)
+                self?.profileModel = ProfileModel(json: json)
+                self?.tableView.reloadData()
+        }
     }
     
-    private func render() {
-        NSLayoutConstraint.activate([
-            coverImageView.widthAnchor.constraint(equalTo: view.widthAnchor, constant: -(2 * 8)),
-            coverImageView.heightAnchor.constraint(equalTo: coverImageView.widthAnchor, multiplier: 9.0/16.0),
-            coverImageView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            coverImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
+    func renderProfileHeaderCell() -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: profileSection) as! ProfileCoverTVC
         
-        NSLayoutConstraint.activate([
-            profileImage.widthAnchor.constraint(equalToConstant: 128),
-            profileImage.heightAnchor.constraint(equalToConstant: 128),
-            profileImage.centerYAnchor.constraint(equalTo: coverImageView.bottomAnchor),
-            profileImage.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
+        cell.profileModel = profileModel
+        cell.setupCell()
+        
+        return cell
+    }
+    
+    func renderPhotoCell() -> UITableViewCell {
+        if(profileModel?.photos?.data?.count == nil){
+            print("Happen")
+            return UITableViewCell()
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: photoSection) as! PhotoTVC
+        cell.data = profileModel?.photos?.data ?? []
+        cell.prepareCollection()
+        cell.setupCell()
+        return cell
     }
 }

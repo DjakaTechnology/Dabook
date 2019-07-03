@@ -26,6 +26,25 @@ class HomeViewController: UIViewController {
         return view
     }()
     
+    let writeBar: UIView = {
+        let view: UIView = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        return view
+    }()
+    
+    private let writeButton: UIButton = {
+        let view: UIButton = UIButton()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.setTitle("Write", for: .normal)
+        view.setTitleColor(.gray, for: .normal)
+        view.addTarget(self, action: #selector(didTapWriteButton), for: .touchDown)
+        view.layer.cornerRadius = 8
+        
+        return view
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,11 +60,14 @@ class HomeViewController: UIViewController {
         
         setupTopBar()
         setupCameraConstraint()
+        setupWriteBar()
     }
     
     private func addSubviews() {
         view.addSubview(topBar)
+        view.addSubview(writeBar)
         topBar.addSubview(cameraImg)
+        writeBar.addSubview(writeButton)
     }
     
     private func setupCameraConstraint() {
@@ -55,7 +77,7 @@ class HomeViewController: UIViewController {
             cameraImg.bottomAnchor.constraint(equalTo: topBar.bottomAnchor),
             cameraImg.widthAnchor.constraint(equalToConstant: 24),
             cameraImg.heightAnchor.constraint(equalToConstant: 24)
-            ])
+        ])
     }
     
     private func setupTopBar() {
@@ -63,6 +85,27 @@ class HomeViewController: UIViewController {
             topBar.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             topBar.widthAnchor.constraint(equalTo: view.widthAnchor),
             topBar.heightAnchor.constraint(equalToConstant: 48)
-            ])
+        ])
+    }
+    
+    private func setupWriteBar() {
+        NSLayoutConstraint.activate([
+            writeBar.topAnchor.constraint(equalTo: topBar.bottomAnchor),
+            writeBar.widthAnchor.constraint(equalTo: view.widthAnchor),
+            writeBar.heightAnchor.constraint(equalToConstant: 64)
+        ])
+        
+        NSLayoutConstraint.activate([
+            writeButton.topAnchor.constraint(equalTo: writeBar.topAnchor),
+            writeButton.widthAnchor.constraint(equalTo: writeBar.widthAnchor),
+        ])
+    }
+    
+    func openWrite() {
+        navigationController?.pushViewController(WiritePostViewController(), animated: true)
+    }
+    
+    @objc func didTapWriteButton() {
+        openWrite()
     }
 }

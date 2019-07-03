@@ -14,6 +14,8 @@ target 'Dabook' do
   pod 'FacebookShare'
   pod 'SwiftHEXColors'
   pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'SDWebImage'
 
   target 'DabookTests' do
     inherit! :search_paths

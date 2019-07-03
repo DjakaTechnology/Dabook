@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dabook/ViewControllers/ProfileViewController.swift"
+            timestampString = "583828723.82652"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dabook/ViewControllers/ProfileViewController.swift"
+            timestampString = "583828723.826641"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "getData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dabook/ViewControllers/ProfileViewController.swift"
+            timestampString = "583828723.826694"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "renderProfileHeaderCell()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dabook/ViewControllers/ProfileViewController.swift"
+            timestampString = "583828723.826739"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
+            landmarkName = "renderProfileHeaderCell()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dabook/ViewControllers/ProfileViewController.swift"
+            timestampString = "583828723.8267829"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
+            landmarkName = "renderProfileHeaderCell()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dabook/TableViewCells/ProfileCoverTVC.swift"
+            timestampString = "583823330.93489"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "ProfileCoverTVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.ProfileCoverTVC.profileModel.getter : Swift.Optional&lt;Dabook.ProfileModel&gt;"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/ProfileCoverTVC.swift"
+                  timestampString = "583755306.303429"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.ProfileCoverTVC.profileModel.setter : Swift.Optional&lt;Dabook.ProfileModel&gt;"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/ProfileCoverTVC.swift"
+                  timestampString = "583755306.305186"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.ProfileCoverTVC.profileModel.modify : Swift.Optional&lt;Dabook.ProfileModel&gt;"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/ProfileCoverTVC.swift"
+                  timestampString = "583755306.306615"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.ProfileCoverTVC.profileModel.modify : Swift.Optional&lt;Dabook.ProfileModel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/ProfileCoverTVC.swift"
+                  timestampString = "583755306.3081599"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.ProfileCoverTVC.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Dabook.ProfileCoverTVC"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/ProfileCoverTVC.swift"
+                  timestampString = "583755306.309469"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "178">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.ProfileCoverTVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Dabook.ProfileCoverTVC&gt;"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/ProfileCoverTVC.swift"
+                  timestampString = "583755306.310804"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "107">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dabook/TableViewCells/ProfileCoverTVC.swift"
+            timestampString = "583823330.9349329"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "coverImageView"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; __C.UIImageView in variable initialization expression of Dabook.ProfileCoverTVC.coverImageView : __C.UIImageView"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/ProfileCoverTVC.swift"
+                  timestampString = "583755306.87528"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "14">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.ProfileCoverTVC.coverImageView.getter : __C.UIImageView"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/ProfileCoverTVC.swift"
+                  timestampString = "583755306.879652"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.ProfileCoverTVC.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Dabook.ProfileCoverTVC"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/ProfileCoverTVC.swift"
+                  timestampString = "583755306.88265"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "249">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.ProfileCoverTVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Dabook.ProfileCoverTVC&gt;"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/ProfileCoverTVC.swift"
+                  timestampString = "583755306.884931"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "166">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dabook/ViewControllers/ProfileViewController.swift"
+            timestampString = "583828723.826888"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "renderPhotoCell()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dabook/ViewControllers/ProfileViewController.swift"
+            timestampString = "583828723.826934"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "renderPhotoCell()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Dabook/TableViewCells/PhotoTVC.swift"
+            timestampString = "583828723.827083"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "PhotoTVC"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.PhotoTVC.data.getter : Swift.Array&lt;Dabook.Data&gt;"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/PhotoTVC.swift"
+                  timestampString = "583755378.815577"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.PhotoTVC.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; Dabook.PhotoTVC"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/PhotoTVC.swift"
+                  timestampString = "583755378.816936"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "153">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Dabook.PhotoTVC.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Dabook.PhotoTVC&gt;"
+                  moduleName = "Dabook"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/djakapradana/Library/Autosave%20Information/DFacebook/Dabook/TableViewCells/PhotoTVC.swift"
+                  timestampString = "583755378.818257"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "96">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

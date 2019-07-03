@@ -45,14 +45,15 @@ class LoginViewController: UIViewController {
     
     @objc func didTapLoginButton() {
         let loginManager = LoginManager()
-        loginManager.logIn(permissions: [ .publicProfile, .userFriends, .userPosts], viewController: self) { loginResult in
+        loginManager.logIn(permissions: [ .publicProfile, .userFriends, .userPosts, .userBirthday, .userGender, .userPosts, .userLocation, .userPhotos], viewController: self) { loginResult in
             switch loginResult {
                 case .failed(let error):
                     print(error)
                 case .cancelled:
                     print("User cancelled login.")
-                case .success(let grantedPermissions, let declinedPermissions, let accessToken):
+            case .success( _, _, let accessToken):
                     UserDefaults.standard.set(accessToken.tokenString, forKey: "token")
+                    print("Token \(accessToken.tokenString)")
                     
                     self.openMainVC()
                 break
@@ -76,6 +77,13 @@ class LoginViewController: UIViewController {
         setupWraperConstraint()
         setupImageConstraint()
         setupLoginConstraint()
+        
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
     private func setupWraperConstraint() {

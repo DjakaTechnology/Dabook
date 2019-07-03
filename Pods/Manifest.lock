@@ -21,7 +21,11 @@ PODS:
   - FBSDKShareKit (5.1.1):
     - FBSDKCoreKit (~> 5.0)
   - Hero (1.4.0)
+  - SDWebImage (5.0.6):
+    - SDWebImage/Core (= 5.0.6)
+  - SDWebImage/Core (5.0.6)
   - SwiftHEXColors (1.2.0)
+  - SwiftyJSON (5.0.0)
 
 DEPENDENCIES:
   - Alamofire
@@ -29,7 +33,9 @@ DEPENDENCIES:
   - FacebookLogin
   - FacebookShare
   - Hero
+  - SDWebImage
   - SwiftHEXColors
+  - SwiftyJSON
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -41,7 +47,9 @@ SPEC REPOS:
     - FBSDKLoginKit
     - FBSDKShareKit
     - Hero
+    - SDWebImage
     - SwiftHEXColors
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -52,8 +60,10 @@ SPEC CHECKSUMS:
   FBSDKLoginKit: b814ebf853e7b28592eab4d24b458a89b3f8d69e
   FBSDKShareKit: 3656136d5be89f5bd59160c962888d760e4225f5
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  SDWebImage: 920f1a2ff1ca8296ad34f6e0510a1ef1d70ac965
   SwiftHEXColors: a4ebe93a70890a9fa124e205dd785cc7552273b4
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
 
-PODFILE CHECKSUM: 32434b0dcba9830ab33d3ca4300357591f7601ea
+PODFILE CHECKSUM: 1d5ad6160df3e9a359f53e466d6215745a132d14
 
 COCOAPODS: 1.7.2

@@ -14,6 +14,9 @@ class ProfileTVC: UITableViewCell {
         let view: UIImageView = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.image = UIImage(named: "logo")
+        view.layer.cornerRadius = 64
+        view.layer.masksToBounds = true
+        view.clipsToBounds = true
         
         return view
     }()
