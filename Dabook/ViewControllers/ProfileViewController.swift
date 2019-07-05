@@ -102,7 +102,7 @@ class ProfileViewController: UITableViewController {
     }
     
     func renderFeedcell() -> UITableViewCell {
-        if(profileModel?.photos?.data?.count == nil){
+        if(profileModel?.feed?.data?.count == nil){
             print("Happen")
             return UITableViewCell()
         }

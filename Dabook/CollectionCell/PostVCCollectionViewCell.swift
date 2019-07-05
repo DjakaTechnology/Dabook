@@ -45,6 +45,7 @@ class PostVCCollectionViewCell: UICollectionViewCell {
         let view: UILabel = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.text = "Loading"
+        view.font = UIFont.systemFont(ofSize: 12)
         
         return view
     }()
@@ -83,7 +84,7 @@ class PostVCCollectionViewCell: UICollectionViewCell {
             contentLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 8),
             photoImg.widthAnchor.constraint(equalToConstant: contentView.bounds.width),
             photoImg.widthAnchor.constraint(equalTo: contentView.widthAnchor),
-            photoImg.topAnchor.constraint(equalTo: contentLabel.bottomAnchor),
+            photoImg.topAnchor.constraint(equalTo: contentLabel.bottomAnchor, constant: 8),
             contentView.leftAnchor.constraint(equalTo: self.leftAnchor),
             contentView.rightAnchor.constraint(equalTo: self.rightAnchor),
             contentView.topAnchor.constraint(equalTo: self.topAnchor),

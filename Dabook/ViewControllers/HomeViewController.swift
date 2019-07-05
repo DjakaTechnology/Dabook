@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class HomeViewController: UIViewController {
+    var data: [FeedDetail] = []
+    
+    var collectionView: UICollectionView!
+    
     let cameraImg: UIImageView = {
         let view: UIImageView = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -53,6 +59,52 @@ class HomeViewController: UIViewController {
         
         self.hero.isEnabled = true
         topBar.hero.id = "btnLogin"
+        
+        getData()
+    }
+    
+    private func getData() {
+        let urlString: String = "\(URLHelper.baseUrl)\(URLHelper.tagged)&access_token=\(UserDefaults.standard.string(forKey: "token") ?? "" )"
+        
+        guard let url: URL = URL(string: urlString.addingPercentEncoding(withAllowedCharacters: CharacterSet.urlQueryAllowed) ?? "") else {
+            print("Invalid URL: \(urlString)")
+            return
+        }
+        
+        Alamofire
+            .request(url, method: .get)
+            .validate()
+            .responseJSON{[weak self](response) in
+                guard response.result.isSuccess else {
+                    print("happen")
+                    return
+                }
+
+                let json = JSON(response.result.value as Any)
+                self?.data = [FeedDetail(json: json)]
+                self?.collectionView.reloadData()
+                
+                print("Total \(self?.data.count))")
+        }
+    }
+    
+    func setupCell() {
+        let layout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top:0,left:0,bottom:0 ,right:0)
+        layout.minimumInteritemSpacing = 0;
+        layout.estimatedItemSize = CGSize(width: view.bounds.width, height: view.bounds.width)
+        
+        collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: layout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(PostVCCollectionViewCell.self, forCellWithReuseIdentifier: "cell")
+        collectionView.backgroundColor = UIColor.clear
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        
+        view.addSubview(collectionView)
+        view.backgroundColor = UIColor(hexString: "#f8f9f9")
+        
+        let height: CGFloat = collectionView.collectionViewLayout.collectionViewContentSize.height
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +113,7 @@ class HomeViewController: UIViewController {
         setupTopBar()
         setupCameraConstraint()
         setupWriteBar()
+        setupCell()
     }
     
     private func addSubviews() {
@@ -101,6 +154,15 @@ class HomeViewController: UIViewController {
         ])
     }
     
+    private func setupPost() {
+        NSLayoutConstraint.activate([
+            collectionView.widthAnchor.constraint(equalTo: view.widthAnchor),
+            collectionView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            collectionView.topAnchor.constraint(equalTo: writeBar.bottomAnchor),
+            collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+            ])
+    }
+    
     func openWrite() {
         navigationController?.pushViewController(WiritePostViewController(), animated: true)
     }
@@ -109,3 +171,19 @@ class HomeViewController: UIViewController {
         openWrite()
     }
 }
+
+extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! PostVCCollectionViewCell
+        cell.model = data[indexPath.row]
+        cell.setupCell()
+        
+        return cell
+    }
+}
+

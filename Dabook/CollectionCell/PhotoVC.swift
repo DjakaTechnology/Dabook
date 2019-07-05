@@ -33,13 +33,21 @@ class PhotoVC: UICollectionViewCell {
     }
     
     func addSubview() {
-        self.addSubview(image)
+        addSubview(image)
     }
     
     func render() {
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        
         NSLayoutConstraint.activate([
-            image.widthAnchor.constraint(equalTo: self.widthAnchor),
-            image.heightAnchor.constraint(equalTo: self.widthAnchor)
+            image.widthAnchor.constraint(equalToConstant: contentView.bounds.width),
+            image.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            image.heightAnchor.constraint(equalTo: contentView.widthAnchor),
+            contentView.leftAnchor.constraint(equalTo: self.leftAnchor),
+            contentView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            contentView.topAnchor.constraint(equalTo: self.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            contentView.bottomAnchor.constraint(equalTo: image.bottomAnchor)
         ])
         
         image.sd_setImage(with: URL(string: model?.picture ?? ""), placeholderImage: UIImage(named: "logo"))
