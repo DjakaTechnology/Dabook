@@ -16,9 +16,9 @@ class MainViewController: UITabBarController {
     let friendVC: FriendViewController = FriendViewController()
     
     override func viewDidLoad() {
-        homeVC.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
-        profileVC.tabBarItem = UITabBarItem(tabBarSystemItem: .topRated, tag: 1)
-        friendVC.tabBarItem = UITabBarItem(tabBarSystemItem: .contacts, tag: 2)
+        homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
+        profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), tag: 1)
+        friendVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
         
         let tabBarList: [UIViewController] = [homeVC, profileVC, friendVC]
         viewControllers = tabBarList

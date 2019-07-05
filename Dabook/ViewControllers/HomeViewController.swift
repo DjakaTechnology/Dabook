@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
+import SwiftHEXColors
 
 class HomeViewController: UIViewController {
     var data: [FeedDetail] = []
@@ -148,12 +149,13 @@ class HomeViewController: UIViewController {
         NSLayoutConstraint.activate([
             writeBar.topAnchor.constraint(equalTo: topBar.bottomAnchor),
             writeBar.widthAnchor.constraint(equalTo: view.widthAnchor),
-            writeBar.heightAnchor.constraint(equalToConstant: 64)
+            writeBar.heightAnchor.constraint(equalToConstant: 32)
         ])
         
         NSLayoutConstraint.activate([
             writeButton.topAnchor.constraint(equalTo: writeBar.topAnchor),
             writeButton.widthAnchor.constraint(equalTo: writeBar.widthAnchor),
+            writeButton.heightAnchor.constraint(equalTo: writeBar.heightAnchor)
         ])
     }
     
