@@ -17,7 +17,6 @@ class PhotoTVC: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         let layout = UICollectionViewFlowLayout()
-//        layout.scrollDirection = UICollectionView.ScrollDirection.vertical
         layout.sectionInset = UIEdgeInsets(top:0,left:0,bottom:0 ,right:0)
         layout.minimumInteritemSpacing = 0;
         
@@ -36,14 +35,7 @@ class PhotoTVC: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func prepareCollection() {
-        
-    }
-    
     func setupCell() {
-        print("Height \(collectionView.frame.height)")
-        print("Total height \(256 * data.count)")
-        
         let height: CGFloat = collectionView.collectionViewLayout.collectionViewContentSize.height
         
         NSLayoutConstraint.activate([
@@ -52,7 +44,7 @@ class PhotoTVC: UITableViewCell {
             collectionView.topAnchor.constraint(equalTo: self.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
-//
+
         NSLayoutConstraint.activate([
             self.heightAnchor.constraint(equalToConstant: height)
         ])
@@ -62,7 +54,7 @@ class PhotoTVC: UITableViewCell {
 extension PhotoTVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

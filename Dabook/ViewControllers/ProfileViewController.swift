@@ -12,15 +12,17 @@ import SwiftyJSON
 
 enum Section: Int{
     case ProfileCover = 0
-    case AboutInfo = 2
     case Photos = 1
+    case AboutInfo = 2
     case Friends = 3
+    case Feed = 4
 }
 
 class ProfileViewController: UITableViewController {
     
     let profileSection: String = "profileHeader"
     let photoSection: String = "photoSection"
+    let postSection: String = "postSection"
     var profileModel: ProfileModel? = nil
 
     override func viewDidLoad() {
@@ -33,11 +35,13 @@ class ProfileViewController: UITableViewController {
     func setupTable() {
         tableView.register(ProfileCoverTVC.self, forCellReuseIdentifier: profileSection)
         tableView.register(PhotoTVC.self, forCellReuseIdentifier: photoSection)
+        tableView.register(PostTVC.self, forCellReuseIdentifier: postSection)
+        tableView.estimatedRowHeight = 44
         tableView.rowHeight = UITableView.automaticDimension
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 4
+        return 5
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -46,6 +50,8 @@ class ProfileViewController: UITableViewController {
                 return renderProfileHeaderCell()
             case Section.Photos.rawValue:
                 return renderPhotoCell()
+            case Section.Feed.rawValue:
+                return renderFeedcell()
          default:
             return UITableViewCell()
         }
@@ -91,8 +97,24 @@ class ProfileViewController: UITableViewController {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: photoSection) as! PhotoTVC
         cell.data = profileModel?.photos?.data ?? []
-        cell.prepareCollection()
         cell.setupCell()
+        return cell
+    }
+    
+    func renderFeedcell() -> UITableViewCell {
+        if(profileModel?.photos?.data?.count == nil){
+            print("Happen")
+            return UITableViewCell()
+        }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: postSection) as! PostTVC
+        cell.data = profileModel?.feed?.data ?? []
+        cell.setupCell()
+        cell.frame = tableView.bounds
+        cell.layoutIfNeeded()
+        cell.collectionView.reloadData()
+        cell.collectionView.heightAnchor.constraint(equalToConstant: cell.collectionView.contentSize.height).isActive = true
+        
         return cell
     }
 }

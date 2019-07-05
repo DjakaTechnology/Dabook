@@ -17,7 +17,7 @@ public final class Feed: NSCoding {
   }
 
   // MARK: Properties
-  public var data: [Data]?
+  public var data: [FeedDetail]?
   public var paging: Paging?
 
   // MARK: SwiftyJSON Initializers
@@ -33,7 +33,7 @@ public final class Feed: NSCoding {
   ///
   /// - parameter json: JSON object from SwiftyJSON.
   public required init(json: JSON) {
-    if let items = json[SerializationKeys.data].array { data = items.map { Data(json: $0) } }
+    if let items = json[SerializationKeys.data].array { data = items.map { FeedDetail(json: $0) } }
     paging = Paging(json: json[SerializationKeys.paging])
   }
 
@@ -49,7 +49,7 @@ public final class Feed: NSCoding {
 
   // MARK: NSCoding Protocol
   required public init(coder aDecoder: NSCoder) {
-    self.data = aDecoder.decodeObject(forKey: SerializationKeys.data) as? [Data]
+    self.data = aDecoder.decodeObject(forKey: SerializationKeys.data) as? [FeedDetail]
     self.paging = aDecoder.decodeObject(forKey: SerializationKeys.paging) as? Paging
   }
 

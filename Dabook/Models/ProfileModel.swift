@@ -29,7 +29,7 @@ public final class ProfileModel: NSCoding {
   public var id: String?
   public var feed: Feed?
   public var gender: String?
-  public var photos: Photos?
+  public var photos: PhotosModel?
   public var birthday: String?
 
   // MARK: SwiftyJSON Initializers
@@ -51,7 +51,7 @@ public final class ProfileModel: NSCoding {
     id = json[SerializationKeys.id].string
     feed = Feed(json: json[SerializationKeys.feed])
     gender = json[SerializationKeys.gender].string
-    photos = Photos(json: json[SerializationKeys.photos])
+    photos = PhotosModel(json: json[SerializationKeys.photos])
     birthday = json[SerializationKeys.birthday].string
   }
 
@@ -79,7 +79,7 @@ public final class ProfileModel: NSCoding {
     self.id = aDecoder.decodeObject(forKey: SerializationKeys.id) as? String
     self.feed = aDecoder.decodeObject(forKey: SerializationKeys.feed) as? Feed
     self.gender = aDecoder.decodeObject(forKey: SerializationKeys.gender) as? String
-    self.photos = aDecoder.decodeObject(forKey: SerializationKeys.photos) as? Photos
+    self.photos = aDecoder.decodeObject(forKey: SerializationKeys.photos) as? PhotosModel
     self.birthday = aDecoder.decodeObject(forKey: SerializationKeys.birthday) as? String
   }
 
