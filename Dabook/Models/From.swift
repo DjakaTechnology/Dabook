@@ -14,11 +14,13 @@ public final class From: NSCoding {
   private struct SerializationKeys {
     static let id = "id"
     static let name = "name"
+    static let picture = "picture"
   }
 
   // MARK: Properties
   public var id: String?
   public var name: String?
+  public var picture: Picture?
 
   // MARK: SwiftyJSON Initializers
   /// Initiates the instance based on the object.
@@ -35,6 +37,7 @@ public final class From: NSCoding {
   public required init(json: JSON) {
     id = json[SerializationKeys.id].string
     name = json[SerializationKeys.name].string
+    picture = Picture(json: json[SerializationKeys.picture])
   }
 
   /// Generates description of the object in the form of a NSDictionary.
@@ -44,6 +47,7 @@ public final class From: NSCoding {
     var dictionary: [String: Any] = [:]
     if let value = id { dictionary[SerializationKeys.id] = value }
     if let value = name { dictionary[SerializationKeys.name] = value }
+    if let value = picture { dictionary[SerializationKeys.picture] = value }
     return dictionary
   }
 
@@ -51,11 +55,13 @@ public final class From: NSCoding {
   required public init(coder aDecoder: NSCoder) {
     self.id = aDecoder.decodeObject(forKey: SerializationKeys.id) as? String
     self.name = aDecoder.decodeObject(forKey: SerializationKeys.name) as? String
+    self.picture = aDecoder.decodeObject(forKey: SerializationKeys.picture) as? Picture
   }
 
   public func encode(with aCoder: NSCoder) {
     aCoder.encode(id, forKey: SerializationKeys.id)
     aCoder.encode(name, forKey: SerializationKeys.name)
+    aCoder.encode(picture, forKey: SerializationKeys.picture)
   }
 
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftHEXColors
 
 class PostTVC: UITableViewCell {
     var data: [FeedDetail] = []
@@ -15,7 +16,13 @@ class PostTVC: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func setupCell() {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top:0,left:0,bottom:0 ,right:0)
         layout.minimumInteritemSpacing = 0;
@@ -29,14 +36,8 @@ class PostTVC: UITableViewCell {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         self.addSubview(collectionView)
-        setupCell()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    func setupCell() {
+        backgroundColor = UIColor(hexString: "#f8f9f9")
+        
         let height: CGFloat = collectionView.collectionViewLayout.collectionViewContentSize.height
         
         NSLayoutConstraint.activate([
@@ -44,18 +45,18 @@ class PostTVC: UITableViewCell {
             collectionView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             collectionView.topAnchor.constraint(equalTo: self.topAnchor),
             collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
-            ])
+        ])
         
         NSLayoutConstraint.activate([
             self.heightAnchor.constraint(equalToConstant: height)
-            ])
+        ])
     }
 }
 
 extension PostTVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

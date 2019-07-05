@@ -23,8 +23,8 @@ class PostVCCollectionViewCell: UICollectionViewCell {
     let profileImg: UIImageView = {
         let view: UIImageView = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.contentMode = UIView.ContentMode.scaleAspectFill
-        view.layer.cornerRadius = 32
+        view.contentMode = UIView.ContentMode.scaleAspectFit
+        view.layer.cornerRadius = 16
         view.layer.masksToBounds = true
         view.clipsToBounds = true
         
@@ -34,6 +34,7 @@ class PostVCCollectionViewCell: UICollectionViewCell {
     let photoImg: UIImageView = {
         let view: UIImageView = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
+        view.contentMode = UIView.ContentMode.scaleAspectFill
         view.clipsToBounds = true
         view.layer.masksToBounds = true
         
@@ -67,36 +68,42 @@ class PostVCCollectionViewCell: UICollectionViewCell {
     }
     
     func render() {
+        self.backgroundColor = .white
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
             profileImg.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 9),
             profileImg.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            profileImg.widthAnchor.constraint(equalToConstant: 64),
-            profileImg.heightAnchor.constraint(equalToConstant: 64),
+            profileImg.widthAnchor.constraint(equalToConstant: 32),
+            profileImg.heightAnchor.constraint(equalToConstant: 32),
             nameLabel.centerYAnchor.constraint(equalTo: profileImg.centerYAnchor),
             nameLabel.leftAnchor.constraint(equalTo: profileImg.rightAnchor, constant: 8),
             contentLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 8),
             contentLabel.topAnchor.constraint(equalTo: profileImg.bottomAnchor, constant: 16),
+            contentLabel.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: 8),
             photoImg.widthAnchor.constraint(equalToConstant: contentView.bounds.width),
-            photoImg.heightAnchor.constraint(equalToConstant: contentView.bounds.width),
             photoImg.widthAnchor.constraint(equalTo: contentView.widthAnchor),
             photoImg.topAnchor.constraint(equalTo: contentLabel.bottomAnchor),
             contentView.leftAnchor.constraint(equalTo: self.leftAnchor),
             contentView.rightAnchor.constraint(equalTo: self.rightAnchor),
             contentView.topAnchor.constraint(equalTo: self.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            contentView.bottomAnchor.constraint(equalTo: photoImg.bottomAnchor)
+            contentView.bottomAnchor.constraint(equalTo: photoImg.bottomAnchor, constant: 16)
         ])
         
         profileImg.image = UIImage(named: "placeholder")
         nameLabel.text = model?.from?.name
-        contentLabel.text = model?.message
+        contentLabel.text = model?.message ?? "Shared a content"
+        
+        profileImg.sd_setImage(with: URL(string: model?.from?.picture?.data?.url ?? ""), placeholderImage: UIImage(named: "placeholder" ))
+        
         guard let url: URL = URL(string: model?.fullPicture ?? "") else {
             self.photoImg.isHidden = true
-//            photoImg.heightAnchor.constraint(equalToConstant: 0).isActive = true
+            photoImg.heightAnchor.constraint(equalToConstant: 0).isActive = true
             return
         }
+        
+        photoImg.heightAnchor.constraint(equalToConstant: 0).isActive = false
         photoImg.sd_setImage(with: url, placeholderImage: UIImage(named: "placeholder"))
     }
 }
