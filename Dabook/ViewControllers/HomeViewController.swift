@@ -36,14 +36,13 @@ class HomeViewController: UIViewController {
         let view: UIView = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         
-        
         return view
     }()
     
     private let writeButton: UIButton = {
         let view: UIButton = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.setTitle("Write", for: .normal)
+        view.setTitle("Whats on your mind ?", for: .normal)
         view.setTitleColor(.gray, for: .normal)
         view.addTarget(self, action: #selector(didTapWriteButton), for: .touchDown)
         view.layer.cornerRadius = 8
@@ -80,11 +79,13 @@ class HomeViewController: UIViewController {
                     return
                 }
 
-                let json = JSON(response.result.value as Any)
-                self?.data = [FeedDetail(json: json)]
-                self?.collectionView.reloadData()
+                let jsonArray = JSON(response.result.value as Any)
                 
-                print("Total \(self?.data.count))")
+                for item in jsonArray["data"] {
+                    self?.data.append(FeedDetail(json: item.1))
+                }
+                
+                self?.collectionView.reloadData()
         }
     }
     
@@ -101,7 +102,6 @@ class HomeViewController: UIViewController {
         collectionView.backgroundColor = UIColor.clear
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(collectionView)
         view.backgroundColor = UIColor(hexString: "#f8f9f9")
         
         let height: CGFloat = collectionView.collectionViewLayout.collectionViewContentSize.height
@@ -113,14 +113,17 @@ class HomeViewController: UIViewController {
         setupTopBar()
         setupCameraConstraint()
         setupWriteBar()
-        setupCell()
+        setupPost()
     }
     
     private func addSubviews() {
+        setupCell()
+        
         view.addSubview(topBar)
         view.addSubview(writeBar)
         topBar.addSubview(cameraImg)
         writeBar.addSubview(writeButton)
+        view.addSubview(collectionView)
     }
     
     private func setupCameraConstraint() {

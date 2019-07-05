@@ -62,10 +62,10 @@ class PostVCCollectionViewCell: UICollectionViewCell {
     }
     
     func addView() {
-        addSubview(nameLabel)
-        addSubview(profileImg)
-        addSubview(photoImg)
-        addSubview(contentLabel)
+        contentView.addSubview(nameLabel)
+        contentView.addSubview(profileImg)
+        contentView.addSubview(photoImg)
+        contentView.addSubview(contentLabel)
     }
     
     func render() {
@@ -93,7 +93,7 @@ class PostVCCollectionViewCell: UICollectionViewCell {
         ])
         
         profileImg.image = UIImage(named: "placeholder")
-        nameLabel.text = model?.from?.name
+        nameLabel.text = model?.from?.name ?? "Anonymous"
         contentLabel.text = model?.message ?? "Shared a content"
         
         profileImg.sd_setImage(with: URL(string: model?.from?.picture?.data?.url ?? ""), placeholderImage: UIImage(named: "placeholder" ))
