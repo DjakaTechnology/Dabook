@@ -14,13 +14,18 @@ class MainViewController: UITabBarController {
     let homeVC: HomeViewController = HomeViewController()
     let profileVC: ProfileViewController = ProfileViewController()
     let friendVC: FriendViewController = FriendViewController()
+    let moreVC: MoreViewController = MoreViewController()
     
     override func viewDidLoad() {
         homeVC.tabBarItem = UITabBarItem(title: "Home", image: UIImage(named: "home"), tag: 0)
         profileVC.tabBarItem = UITabBarItem(title: "Profile", image: UIImage(named: "profile"), tag: 1)
-        friendVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
+        moreVC.tabBarItem = UITabBarItem(tabBarSystemItem: .more, tag: 2)
         
-        let tabBarList: [UIViewController] = [homeVC, profileVC, friendVC]
+        let tabBarList: [UIViewController] = [homeVC, profileVC, moreVC]
         viewControllers = tabBarList
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
 }

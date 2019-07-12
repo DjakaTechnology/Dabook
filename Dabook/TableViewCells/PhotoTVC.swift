@@ -36,17 +36,21 @@ class PhotoTVC: UITableViewCell {
     }
     
     func setupCell() {
-        let height: CGFloat = collectionView.collectionViewLayout.collectionViewContentSize.height
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            collectionView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            collectionView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            collectionView.widthAnchor.constraint(equalTo: contentView.widthAnchor, constant: -16),
+            collectionView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
         ])
 
         NSLayoutConstraint.activate([
-            self.heightAnchor.constraint(equalToConstant: height)
+            contentView.leftAnchor.constraint(equalTo: self.leftAnchor),
+            contentView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            contentView.topAnchor.constraint(equalTo: self.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            contentView.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 16),
+            contentView.heightAnchor.constraint(equalToConstant: collectionView.collectionViewLayout.collectionViewContentSize.height),
         ])
     }
 }

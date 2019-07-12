@@ -13,9 +13,9 @@ import SwiftyJSON
 enum Section: Int{
     case ProfileCover = 0
     case Photos = 1
-    case AboutInfo = 2
-    case Friends = 3
-    case Feed = 4
+    case Feed = 2
+    case AboutInfo = 3
+    case Friends = 4
 }
 
 class ProfileViewController: UITableViewController {
@@ -98,6 +98,7 @@ class ProfileViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: photoSection) as! PhotoTVC
         cell.data = profileModel?.photos?.data ?? []
         cell.setupCell()
+        cell.layoutIfNeeded()
         return cell
     }
     
@@ -111,9 +112,12 @@ class ProfileViewController: UITableViewController {
         cell.data = profileModel?.feed?.data ?? []
         cell.setupCell()
         cell.frame = tableView.bounds
-        cell.layoutIfNeeded()
         cell.collectionView.reloadData()
+        
+//        let height: CGFloat = cell.collectionView.collectionViewLayout.collectionViewContentSize.height
+//        cell.heightAnchor.constraint(equalToConstant: height)
         cell.collectionView.heightAnchor.constraint(equalToConstant: cell.collectionView.contentSize.height).isActive = true
+        cell.layoutIfNeeded()
         
         return cell
     }

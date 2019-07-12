@@ -87,6 +87,7 @@ class HomeViewController: UIViewController {
                 }
                 
                 self?.collectionView.reloadData()
+                self?.view.layoutIfNeeded()
         }
     }
     

@@ -26,7 +26,7 @@ class PostTVC: UITableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top:0,left:0,bottom:0 ,right:0)
         layout.minimumInteritemSpacing = 0;
-        layout.estimatedItemSize = CGSize(width: self.bounds.width, height: self.bounds.width)
+        layout.estimatedItemSize = CGSize(width: self.bounds.width, height: self.bounds.height)
         
         collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
         collectionView.delegate = self
@@ -39,18 +39,25 @@ class PostTVC: UITableViewCell {
         backgroundColor = UIColor(hexString: "#f8f9f9")
         
         let height: CGFloat = collectionView.collectionViewLayout.collectionViewContentSize.height
+        contentView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            collectionView.widthAnchor.constraint(equalTo: self.widthAnchor),
-            collectionView.centerXAnchor.constraint(equalTo: self.centerXAnchor),
-            collectionView.topAnchor.constraint(equalTo: self.topAnchor),
-            collectionView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
+            collectionView.widthAnchor.constraint(equalTo: contentView.widthAnchor),
+            collectionView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            collectionView.topAnchor.constraint(equalTo: contentView.topAnchor),
         ])
         
         NSLayoutConstraint.activate([
+            contentView.leftAnchor.constraint(equalTo: self.leftAnchor),
+            contentView.rightAnchor.constraint(equalTo: self.rightAnchor),
+            contentView.topAnchor.constraint(equalTo: self.topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            contentView.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 16),
+            contentView.heightAnchor.constraint(equalToConstant: height),
             self.heightAnchor.constraint(equalToConstant: height)
         ])
     }
+    
 }
 
 extension PostTVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
