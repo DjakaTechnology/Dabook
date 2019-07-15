@@ -49,7 +49,7 @@ class PhotoTVC: UITableViewCell {
             contentView.rightAnchor.constraint(equalTo: self.rightAnchor),
             contentView.topAnchor.constraint(equalTo: self.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            contentView.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 16),
+            contentView.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor),
             contentView.heightAnchor.constraint(equalToConstant: collectionView.collectionViewLayout.collectionViewContentSize.height),
         ])
     }

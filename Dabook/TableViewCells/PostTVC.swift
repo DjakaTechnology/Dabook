@@ -26,7 +26,7 @@ class PostTVC: UITableViewCell {
         let layout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top:0,left:0,bottom:0 ,right:0)
         layout.minimumInteritemSpacing = 0;
-        layout.estimatedItemSize = CGSize(width: self.bounds.width, height: self.bounds.height)
+        layout.estimatedItemSize = CGSize(width: self.bounds.width, height: self.bounds.width)
         
         collectionView = UICollectionView(frame: self.bounds, collectionViewLayout: layout)
         collectionView.delegate = self
@@ -38,7 +38,6 @@ class PostTVC: UITableViewCell {
         self.addSubview(collectionView)
         backgroundColor = UIColor(hexString: "#f8f9f9")
         
-        let height: CGFloat = collectionView.collectionViewLayout.collectionViewContentSize.height
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -53,8 +52,7 @@ class PostTVC: UITableViewCell {
             contentView.topAnchor.constraint(equalTo: self.topAnchor),
             contentView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             contentView.bottomAnchor.constraint(equalTo: collectionView.bottomAnchor, constant: 16),
-            contentView.heightAnchor.constraint(equalToConstant: height),
-            self.heightAnchor.constraint(equalToConstant: height)
+            contentView.heightAnchor.constraint(equalToConstant: collectionView.collectionViewLayout.collectionViewContentSize.height)
         ])
     }
     

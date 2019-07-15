@@ -30,6 +30,10 @@ class WiritePostViewController: UIViewController {
         return view
     }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    
     private let btnShare: UIButton = {
         let view: UIButton = UIButton()
         view.translatesAutoresizingMaskIntoConstraints = false

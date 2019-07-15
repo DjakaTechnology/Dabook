@@ -15,6 +15,8 @@
 		4A4D358B22C92DB90082F87A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A4D358A22C92DB90082F87A /* Assets.xcassets */; };
 		4A4D359922C92DB90082F87A /* DabookTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D359822C92DB90082F87A /* DabookTests.swift */; };
 		4A4D35A422C92DB90082F87A /* DabookUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A4D35A322C92DB90082F87A /* DabookUITests.swift */; };
+		4A8394D222D045CF00E25996 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8394D122D045CF00E25996 /* MoreViewController.swift */; };
+		4A8394D422D04D5700E25996 /* NavigationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8394D322D04D5700E25996 /* NavigationProtocol.swift */; };
 		4A98BF0622CC7FF3001F71C3 /* WritePostProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98BF0522CC7FF3001F71C3 /* WritePostProtocol.swift */; };
 		4A98BF0822CC806C001F71C3 /* WiritePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98BF0722CC806C001F71C3 /* WiritePostViewController.swift */; };
 		4A98BF0A22CC90A0001F71C3 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A98BF0922CC90A0001F71C3 /* ImagePicker.swift */; };
@@ -83,6 +85,8 @@
 		4A4D359F22C92DB90082F87A /* DabookUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DabookUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A4D35A322C92DB90082F87A /* DabookUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DabookUITests.swift; sourceTree = "<group>"; };
 		4A4D35A522C92DB90082F87A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4A8394D122D045CF00E25996 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		4A8394D322D04D5700E25996 /* NavigationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationProtocol.swift; sourceTree = "<group>"; };
 		4A98BF0522CC7FF3001F71C3 /* WritePostProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WritePostProtocol.swift; sourceTree = "<group>"; };
 		4A98BF0722CC806C001F71C3 /* WiritePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WiritePostViewController.swift; sourceTree = "<group>"; };
 		4A98BF0922CC90A0001F71C3 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
@@ -221,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				4A98BF0522CC7FF3001F71C3 /* WritePostProtocol.swift */,
+				4A8394D322D04D5700E25996 /* NavigationProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -252,6 +257,7 @@
 				4AF42F0C22C9CB1E008F606B /* FriendViewController.swift */,
 				4A3D932C22CB18C800411FA2 /* ProfileViewController.swift */,
 				4A98BF0722CC806C001F71C3 /* WiritePostViewController.swift */,
+				4A8394D122D045CF00E25996 /* MoreViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -522,6 +528,7 @@
 				4A98E33B22CB5FBE008945CC /* PictureData.swift in Sources */,
 				4A98E32922CB589E008945CC /* PhotoCollection.swift in Sources */,
 				4A98E34322CB5FBE008945CC /* PhotosModel.swift in Sources */,
+				4A8394D222D045CF00E25996 /* MoreViewController.swift in Sources */,
 				4A98BF0622CC7FF3001F71C3 /* WritePostProtocol.swift in Sources */,
 				4AF42F2A22CA145E008F606B /* PostTVC.swift in Sources */,
 				4A98E33E22CB5FBE008945CC /* Location.swift in Sources */,
@@ -531,6 +538,7 @@
 				4AB2C8B022C93ACA0094048E /* MainViewController.swift in Sources */,
 				4A98E32722CB50A0008945CC /* PhotoTVC.swift in Sources */,
 				4A4D358622C92DB80082F87A /* LoginViewController.swift in Sources */,
+				4A8394D422D04D5700E25996 /* NavigationProtocol.swift in Sources */,
 				4A98E32C22CB59CB008945CC /* PhotoVC.swift in Sources */,
 				4A3D932B22CB184700411FA2 /* ProfileCoverTVC.swift in Sources */,
 				4A3D932D22CB18C800411FA2 /* ProfileViewController.swift in Sources */,

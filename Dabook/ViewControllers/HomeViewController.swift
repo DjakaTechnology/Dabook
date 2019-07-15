@@ -87,7 +87,6 @@ class HomeViewController: UIViewController {
                 }
                 
                 self?.collectionView.reloadData()
-                self?.view.layoutIfNeeded()
         }
     }
     
@@ -105,8 +104,6 @@ class HomeViewController: UIViewController {
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
         view.backgroundColor = UIColor(hexString: "#f8f9f9")
-        
-        let height: CGFloat = collectionView.collectionViewLayout.collectionViewContentSize.height
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -119,12 +116,12 @@ class HomeViewController: UIViewController {
     }
     
     private func addSubviews() {
-        setupCell()
-        
         view.addSubview(topBar)
         view.addSubview(writeBar)
         topBar.addSubview(cameraImg)
         writeBar.addSubview(writeButton)
+        
+        setupCell()
         view.addSubview(collectionView)
     }
     
