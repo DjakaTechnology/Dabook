@@ -94,7 +94,7 @@ class ProfileCoverTVC: UITableViewCell {
         
         NSLayoutConstraint.activate([
             self.topAnchor.constraint(equalTo: coverImageView.topAnchor),
-            self.bottomAnchor.constraint(equalTo: genderLabel.bottomAnchor)
+            self.bottomAnchor.constraint(equalTo: genderLabel.bottomAnchor, constant: 8)
         ])
         
         if(profileModel == nil) { return }

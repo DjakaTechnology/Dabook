@@ -13,7 +13,7 @@ class MoreViewController: UIViewController {
     let profileLabel: UILabel = {
         let view: UILabel = UILabel()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.text = "Loading"
+        view.text = "More"
         
         return view
     }()
@@ -39,16 +39,16 @@ class MoreViewController: UIViewController {
     }
     
     private func addView() {
-        view.addSubview(profileLabel)
+//        view.addSubview(profileLabel)
         view.addSubview(btnLogout)
     }
     
     private func render() {
-        NSLayoutConstraint.activate([
-            profileLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
-            profileLabel.leftAnchor.constraint(equalTo: view.leftAnchor),
-            profileLabel.widthAnchor.constraint(equalTo: view.widthAnchor),
-        ])
+//        NSLayoutConstraint.activate([
+//            profileLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+//            profileLabel.leftAnchor.constraint(equalTo: view.leftAnchor),
+//            profileLabel.widthAnchor.constraint(equalTo: view.widthAnchor),
+//        ])
         
         NSLayoutConstraint.activate([
             btnLogout.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant:  -16),
