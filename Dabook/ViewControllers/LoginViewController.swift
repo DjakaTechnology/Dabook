@@ -45,7 +45,7 @@ class LoginViewController: UIViewController {
     
     @objc func didTapLoginButton() {
         let loginManager = LoginManager()
-        loginManager.logIn(permissions: [ .publicProfile, .userFriends, .userPosts, .userBirthday, .userGender, .userPosts, .userLocation, .userPhotos], viewController: self) { loginResult in
+        loginManager.logIn(permissions: [ .publicProfile], viewController: self) { loginResult in
             switch loginResult {
                 case .failed(let error):
                     print(error)
